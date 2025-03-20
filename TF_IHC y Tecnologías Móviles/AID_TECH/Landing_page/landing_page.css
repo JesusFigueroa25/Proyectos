@@ -1,0 +1,282 @@
+body{
+    height: 100%;   /* porcentaje total del bloque padre*/
+    margin: 0px;    /* No hay espaciado de afuera entre otro bloque(hmtl)*/
+    padding: 0px;   /* No hay espaciado  adentro del bloque*/
+    background-image: linear-gradient(to top left,#1BD6FF,#720094);
+}
+
+.home{
+    position: relative; /* Es para mover los elementos dentro del bloque*/
+    width: 100vw; /* 'vw' es para la pagina y establece un porcentaje */
+    height: 100vh; 
+    overflow: hidden;/*oculta elementos que sobrepasan al contenedor*/
+}
+
+/*display: flex      = es para mover por columna, fila; MOVER BLOQUES*/
+/*position: relative = mover elementos pequeñas;        MOVER ELEMENTOS*/
+
+.header,.main_logotype,.header_nav{
+    border: 1px solid #000000;  /*borde negro que resalte a los bloques*/
+}
+.header{
+
+    width: 100%;  /*WIDTH: ancho*/
+    height: 80px; /*HEIGHT: alto*/
+    background-color: #00000044;
+    display: flex; /*Columnas*/
+    justify-content: center; /*Alinear los elementos en centro*/
+    font-family: 'Inter'; /*Tipo de letra*/
+    font-style: normal;/*estilo de letra, por ejm: negrita, echada,etc*/
+    font-size: 16px;/*tamaño de letra*/
+}
+a{
+    text-decoration: none;/*Sacar la rayita de la letra cuando es un link*/
+}
+/* --------------------------------------- */
+.main_logotype{
+    display: flex;
+    flex: 1; /*ocupe todo en el bloque padre*/
+    justify-content: center;
+}
+.link_logo{ 
+     width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; 
+}
+.link_logo .logo{ /*Imagen*/
+    height: 60%;
+    color: #ffff;
+    padding-right: 30px; /*espacio dentro del bloquer*/
+    transition: all 1s; /*animacion en el bloque por cierto*/
+}
+.link_logo .logo:hover{
+    transform: scale(1.2);/*aumentar el tamaño*/
+    background-color: #3c34b3;/*Al dar click se presente este fondo en el bloque*/
+    border-radius: 10px; /*Borde medio circular*/
+}
+/* ----------------------------------------- */
+.header_nav{
+    flex: 2;
+}
+
+.header_nav_ul{
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;  /*columnas*/
+    align-items: center;        /*Alinearlo en el medio del eje 'y' o vertical*/
+    justify-content: center;    /*Alinearlo en el medio del eje 'x' o horizantal*/
+}
+.opcion a{
+    color: #ffffff;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.opcion a:hover{
+    border-bottom: 2px solid #35a33e;
+}
+/* ------------------------------------ */
+
+.opciones_de_inicio_sesion{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex: 1.5;
+    gap: 0px 10px;/*espaciado entre los elementos o bloques hijas, como un padding*/
+}
+.opciones_de_inicio_sesion a{
+    padding: 10px;
+    background-color: #26a8c5;/*afecta los dos en este caso*/
+}
+.link_crear_cuenta{
+    background-color: #321f5d;
+    border-radius: 10px;
+    color: #000000;
+
+}
+.link_iniciar_sesion{
+    color: #ffff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.5s;
+}
+.link_iniciar_sesion:hover{
+    background-color: #555555;
+    border-radius: 10px;
+}
+.link_crear_cuenta:hover{
+    background-color: #9734e8;
+    border-radius: 10px;
+}
+/* ------------------------------------------ */
+/* background-image: linear-gradient(to top right, yellow 20%, red 80) */
+
+
+
+
+/* -------------------------------------------MAIN--------------------------------------- */
+
+.main{ /*El contenido de la*/
+
+    position: relative; /* Es para mover los elementos dentro del bloque*/
+    width: 100vw; /*agarra el ancho completo del bloque padre(home)*/
+    height:calc(100vh - 80px); /*ALTURA del bloque completo del padre(home) menos 80 px osea la altura del header*/
+    /* -height:100vh; */
+    /* -border: 1px solid #000000; */
+    display: flex;
+    justify-content: center; /*Alinearlo en el medio del eje 'x' o horizantal*/
+    align-items: center;     /*Alinearlo en el medio del eje 'y' o vertical*/
+}
+.main_container1{
+    flex: 2;
+     border: 1px solid #000000;  
+    height: 569px;
+}
+
+.h1_frace_principal,.descripcion_de_frace_princil{
+    border: 1px solid #000000;      /*borde negro que resalte a los bloques*/
+    font-family: 'Inter', sans-serif;
+    margin:30px 50px 20px 25%;        /*arriba, derecha, abajo, izquierda*/
+    color: #ffff;
+}
+
+.h1_frace_principal{
+    font-weight: 100;   /*GROSOR DE LA LETRA*/
+    font-size: 80px;    /*Tamaño de la letra*/
+    line-height: 90px;  /*espaciado entre las letras verticalmente*/
+}
+
+.descripcion_de_frace_princil{
+    font-weight: 400;   /*GROSOR DE LA LETRA*/
+    font-size: 20px;    /*Tamaño de la letra*/
+    line-height: 20px;  /*espaciado entre las letras verticalmente*/
+    margin-top: 0px;   /*espaciado de arriba entre bloques */
+    margin-bottom:0px;
+    padding: 5px;
+
+}
+
+.btn_empesar{
+    margin:20px 10px 20px 35%; /*arriba, derecha, abajo, izquierda*/
+    /*margin del bloque padre(main-container1)*/
+    padding: auto;
+    width: 200px;
+    height: 55px;
+    background: #c37354;
+    border: 4px solid #ffffff;
+    border-radius: 30px;
+    font-size: 30px;
+    color: #ffff;
+    transition: all 0.03s;
+}
+.btn_empesar:hover{
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+/*-webkit-animation: nombre-animación duración retardo 
+iteración dirección relleno estado-inicial*/
+button:hover {
+    background-color: #0e1e82;
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse .6s infinite;
+    animation: pulse512 .5s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+    box-shadow: 0 0 0 0 #baa949;
+    }
+
+    70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+
+    100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+}
+
+/* ------------IMAGENES DEL HOME----- */
+
+.main_container2{
+    border: 1px solid #000000;      /*borde negro que resalte a los bloques*/
+    flex: 3;
+    /* border: 1px solid #000000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imghome{
+    border: 1px solid #000000;    /*borde negro que resalte a los bloques*/
+    margin: 10px 0px 20px 20px;     /*arriba, derecha, abajo, izquierda*/
+}
+
+
+/* Bolas absolutas */
+
+.circulo{
+    position: absolute; /*mover los circulos en cualquier parte del contene*/
+    border-radius: 50%;
+    z-index: -1; /*para que se muestre detras de todos*/
+}
+.circulo1-home{
+    width: 85px;
+    height: 85px;
+    background-image: linear-gradient(to top, #293E4D,#438d54,#d5f64f);
+    top: 85%;
+    left: 20%;
+}
+.circulo2-home{
+    width: 380px;
+    height: 380px;
+    background-image: linear-gradient(to top, #e10303,#0ac937e6,#1327dd);
+    top: 20%;
+    left: 75%;
+}
+.circulo3-home{
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(to top, #010c13,#33cc22,#f02222);
+    top: 90%;
+    left: 30%;
+}
+
+
+/* -------------------------CUERPO-------------------------------------------- */
+.cuerpo{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.sobre-nosotros,div,.sobre-nosotros div p{
+    border: 1px solid #000000;      /*borde negro que resalte a los bloques*/
+}
+
+.sobre-nosotros{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 30px
+    
+}
+
+h2{
+    display: inline-block;
+}
+.sobre-nosotros h2{
+color: #0e1e82;
+}
+#hola{
+color: #33cc22;
+}

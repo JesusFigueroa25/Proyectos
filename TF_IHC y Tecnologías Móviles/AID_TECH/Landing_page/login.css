@@ -1,0 +1,372 @@
+
+body{
+    height: 100%;   /* porcentaje total del bloque padre*/
+    margin: 0px;    /* No hay espaciado de afuera entre otro bloque(hmtl)*/
+    padding: 0px;   /* No hay espaciado  adentro del bloque*/
+}
+
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+.nav{
+    position: relative; /* Es para mover los elementos dentro del bloque*/
+    display: flex; /*Columnas*/
+    width: 100vw;
+    min-width: 450px;
+    height: 60px;
+    background-color:#000000;
+    flex-wrap: wrap;
+    font-weight: 10;/*GROSOR DE LA LETRA*/
+    z-index: 1; /*para que se muestre detras de todos*/
+    /* position: sticky; */
+}
+/* ------------------------------------------------------HEADER---------------------------- */
+/* Header -> nav -> logo AID TECH */
+.nav_logo{
+    width: 100px;
+    height: 100%;
+    flex: 1;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;   /*Alinearlo en el medio del eje 'x' o horizantal*/
+    align-items: center;        /*Alinearlo en el medio del eje 'y' o vertical*/    
+}
+
+div .logo_AID{
+    width: 50px;
+}
+
+/* Header -> NAV -> Iconocs y opciones de menu */
+.nav-iconos{
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    height: 100%;
+    min-width: 150px;
+    flex: 3; /*Le da 3/4 del total de ancho */
+    background-color: #000000;
+    justify-content:center;/*el contenido esta al centro horizontalmente*/
+    /*flex-end : al final*/
+    align-items: center; /*eje 'y' , centro*/
+}
+
+.nav-li{
+    display: flex;  
+    font-size: 16px;    /*tamaño de la letra*/
+    height: 50%;
+    align-items: center;
+    padding: 0px 0px;
+    transition: all .5s;
+}
+
+.nav-li:hover{
+    background-color: #2197B1;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.nav-li a{ /*Las letras: Menu, precios, contacto, etc*/
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    margin: 0px 10px 0 5px;/*arriba, derecha, abajo, izquierda*/
+}
+
+.nav-li i{/*imagen , casa, dolar, etc*/
+    margin-left: 10px;
+}
+
+.nav_dowloand{
+    flex: 1.4;
+    display: flex;  
+    justify-content: center;   /*Alinearlo en el medio del eje 'x' o horizantal*/
+    align-items: center;        /*Alinearlo en el medio del eje 'y' o vertical*/    
+}
+.logo_googlePlay{
+    width:120px;
+}
+.app_store{
+    width:90px; 
+    margin-left: 20px;
+}
+
+.configuracion{
+    width:35px;
+    margin-left: 20px;
+
+}
+.logos_hover:hover{
+    background-color: #9adfee;
+    transition: .5s;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+.container_2{
+    display: flex; /*Columnas */
+    background-color: #bf2222;
+    height: calc(100vh - 60px);
+    width: 100%;
+    align-items: center;        /*y*/
+    justify-content: center;    /*x*/
+}
+
+.logo_general, .container_incio-secion{
+    display: flex;
+    flex: 1;
+    align-items: center;        /*y*/
+    justify-content: center;    /*x*/
+}
+
+
+/* todo del incio de sesion */
+
+.div_inicio-sesion{
+    display: flex;
+    background-color:#e6b815;
+    flex-direction: column;/*Se usa para que los elementos esten debajo de otro*/
+    padding: 0px;
+    height: 400px;
+    width: 300px;
+    border-radius: 46px;
+    box-shadow:  26px 26px 31px #0a0606, -26px -26px 31px #66cc62;/*sombreado de colores*/
+    /* z-index: 5w; */
+}
+
+.lbl-acceso{
+    font-family: 'inter';
+    font-size: 40px;
+    font-weight: 300px;
+    text-align: center;
+    color: #2197B1;
+    padding: 5px 10px 0px 10px;
+}
+
+.group-input-usuario, .group-input-contraseña{
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.input_usuario, .input_contraseña{
+    position: relative;
+    width: 210px;
+    height: 36px;
+    border:0.5px solid #1406af;
+    outline: none;
+    margin: 0  30px ;   
+    padding: 0px 5px;
+    border-radius: 30px;    
+}
+
+.lbl-usuario, .lbl-contraseña{
+    position: absolute;
+    color: #0c1618;
+    left: 50px;
+    top: 10px;
+    transition: all 0.4s;
+}
+
+.input_usuario:focus, 
+.input_usuario:valid, 
+.input_contraseña:focus, 
+.input_contraseña:valid {
+    outline: none;
+    border: 0.5px solid #38e30e;
+}
+
+.input_usuario:focus ~ .lbl-usuario, 
+.input_usuario:valid ~ .lbl-usuario, 
+.input_contraseña:focus ~ .lbl-contraseña, 
+.input_contraseña:valid ~ .lbl-contraseña{
+    transform: translateY(-25px) scale(0.8); 
+    /*translateY: traslada la palabra a cierta pos 'y' */
+    /*scale: agrando el tamaño de la letra*/
+    color: #d00909;
+}
+
+.lbl-olvidaste-contra{
+    position: relative;
+    color: #2197B1;
+    text-align: center;
+    top: -10px;
+}
+
+.btn-ingresar, .btn-registrarse{
+    background-color: #2197B1;
+    width: 150px;
+    height: 36px;
+    margin: 5px auto;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+
+}
+
+.btn-ingresar:hover,.btn-registrarse:hover {
+    background-color: #19bce1;
+    cursor: pointer;
+}
+
+.lbl-Ingresar-DOM{
+    color: #676e6f;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* -------Iconos de redes sociales---------- */
+
+.container_redes{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.container_redes a{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.fa-brands{
+    color: #000000;
+    transition: all 0.6s;
+}
+
+.container_redes a:hover .fa-brands{
+    color: #ffffff;
+}
+
+/* ------para GOOGLE---- */
+a.link-google:hover{    
+    background: linear-gradient(to top,#4285F4,#34A853,#FBBC05,#EA4335);
+}
+
+/* ------para FACEBOOK---- */
+a.link-facebook:hover{
+    background: #3b5998;
+}
+
+/* ------para INSTAGRAM---- */
+a.link-instagram:hover{
+    background: linear-gradient(to top,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4);
+}
+
+/* ------para AWS---- */
+a.link-aws:hover{
+    background: linear-gradient(to top,#d08006,#FF9900,#131A22,#232F3E);
+}
+
+
+/* Bolas de colores */
+
+.globo{
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+}
+.globo1{
+    left: 35px;
+    top: 6px;
+    background-image: linear-gradient(to top, #e81b1b,#02e737,#2a4eef);
+
+}
+.globo2{
+    left: 1px;
+    top: -35px;
+    background-color:#FF802C ;
+}
+.globo3{
+    left: -67.07px;
+    top: 40px;
+    background-color: #B252B4;
+}
+
+.globo4{
+    left: -135px;
+    top: 149px;
+    background-color: #FF802C;
+} 
+
+
+/*--------------------------------------------*/
+.footer{
+    background-color: #000000;
+    padding: 10px 0;
+    display: flex;
+}
+.all_footer{
+    display: flex;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px 10px 0px;
+    margin: 0px 10px 0px 10px;
+}
+.col-1{
+    margin: 0 10px 0 0;
+    padding-left: 20px;
+}
+.col-1 ul a{
+text-decoration: none;
+color: #ffffff;
+
+}
+.col-1 ul{
+    margin-bottom: 50px;
+    margin-top: 0px;
+    text-decoration: none;
+}
+.col-2{
+    padding-top: 65px;
+
+}
+.col-2 ul a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    list-style-type: none;
+    list-style: none;
+
+}
+.col-3{
+    padding-top: 0px;
+    justify-content:flex-end; 
+    margin-left: 70vb;
+    
+}
+.col-3 h4{
+    margin: 10px 0 0 0 ;
+    text-align: center;
+      font-size: 25px;    /*tamaño de la letra*/
+      margin-bottom: 30px;
+}
+
+ .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    margin-top: 30px;
+}
+.social-links a:hover{
+    color: #ffffff;
+    background-color: #215a9b;
+}

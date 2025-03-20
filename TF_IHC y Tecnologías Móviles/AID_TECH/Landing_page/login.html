@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META-PAQUETES -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/30effb0e24.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- INCIO-TODO LA PAGINA -->
+    <header class="hero">
+
+        <!-- INCIO-NAVEGACION -->
+        <nav class="nav">
+            <div class="nav_logo"> <!-- Logo de AID TECH -->
+                <img src="imagenes/logo_blanco.png" alt="" class="logo_AID">
+            </div>
+            <ul class="nav-iconos"> <!-- logos y opciones de menu -->
+                <li class="nav-li nav-menu">
+                    <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                    <a href="">Menu</a>
+                </li>
+                <li class="nav-li nav-precios">
+                    <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
+                    <a href="#">Precios</a>
+                </li>
+                <li class="nav-li nav-contacto">
+                    <i class="fa-solid fa-address-book" style="color: #f7f9fd;"></i>
+                    <a href="#">Contacto</a>
+                </li>
+                <li class="nav-li nav-sobre_nosotros">
+                    <i class="fa-solid fa-people-group" style="color: #ffffff;"></i>
+                    <a href="#">sobre nosotros</a>
+                </li>
+                <li class="nav-li nav-Ayuda">
+                    <i class="fa-solid fa-circle-question" style="color: #ffffff;"></i>
+                    <a href="#">Ayuda</a>
+                </li>
+                <li class="nav-li nav-ajustes">
+                    <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                    <a href="#">Ajustes</a>
+                </li>
+            </ul>
+
+            <div class="nav_dowloand">
+                <a href="" class="logos_hover"><img src="logo_googlePlay.png" alt="" class="logo_googlePlay"></a>
+                <a href=""><img src="app_store.png" alt="" class="app_store"></a>
+                <a href=""><img src="configuracion.png" alt="" class="configuracion"></a>
+            </div>
+
+        </nav>
+        <!-- FIN-NAVEGACION -->
+
+
+        <!-- Globos de adorno -->
+        <section class="container-globos">
+            <div class="globo globo1">1</div>
+            <div class="globo globo2">2</div>
+            <div class="globo globo3">3</div>
+            <div class="globo globo4">4</div>
+        </section>
+
+        <!-- Seccion de inicio de sesion -->
+        <section class="container_2">
+            <section class="logo_general"> <!-- LOGO-AID TECH -->
+                <img src="imagenes/logo_negro.png" alt="">
+            </section>
+            <!--    INICIO - ACCESO -->
+            <section class="container_incio-secion">
+                <div class="div_inicio-sesion">
+                    <label for="Text" class="lbl-acceso">Acceso</label>
+                    <div class="group-input-usuario">
+                        <!-- autocomplete="off" : Es para que el navegador no permitar autocompletar con valroes anterioes -->
+                        <input type="text" class="input_usuario" required>
+                        <label class="lbl-usuario">Usuario</label>
+                    </div>
+                    <div class="group-input-contraseña">
+                        <input type="password" class="input_contraseña" required>
+                        <!-- Required es para colocar el text dentro del input -->
+                        <label class="lbl-contraseña">Contraseña</label>
+                        <!-- Label es para centrar el texto dentro del input -->
+                    </div>
+                    <label for="Text" class="lbl-olvidaste-contra">¿Olvidaste tu contraseña?</label>
+                    <button value="Ingresar" class="btn-ingresar">Ingresar</button>
+                    <button value="Ingresar" class="btn-registrarse">Registrarse</button>
+                    <label for="Text" class="lbl-Ingresar-DOM">Ingresar de otra manera</label>
+                    <!-- <div class="container-redes-incio-secion"> -->
+                    <div class="container_redes">
+                        <a href="#" class="link-google"><i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="link-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="link-instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="link-aws"><i class="fa-brands fa-aws"></i></a>
+                        <a href="#" class="link-aws">☢️</a>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </section>
+
+            <!--    FIN - ACCESO -->
+
+        </section>
+    </header>
+    <!-- FIN-TODO LA PAGINA -->
+
+
+
+    <!-- FOOTER  -->
+    <footer class="footer">
+        <div class="all_footer">
+            <div class="col-1">
+                <img src="imagenes/logo_blanco.png" width="80" alt="logo_negro">
+                <ul>
+                    <li><a href="">
+                            Descargar ahora
+                        </a></li>
+                    <li><a href="">
+                            Acerca de
+                        </a></li>
+                    <li><a href="">
+                            Ayuda de
+                        </a></li>
+                </ul>
+                <small>
+                    <p>
+                        &copy; AID TECH Todos los derechos reservados
+                    </p>
+                </small>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <li><a href="#">Licencias</a></li>
+                    <li><a href="#">Caracteristicas</a></li>
+                    <li><a href="#">Precios</a></li>
+                    <li><a href="#">Politica de privacidad</a></li>
+                </ul>
+            </div>
+
+            <div class="col-3">
+                <h4>Obtenga la App</h4>
+                <div class="footer_imagenes">
+                    <img src="logo_googlePlay.png" width="120" alt="Google Play">
+                    <img src="app_store.png" width="90" alt="#">
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <img src="imagenes/logo_negro.png" alt=""> -->
+</body>
+
+</html>
