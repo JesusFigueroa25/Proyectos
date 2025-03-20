@@ -1,0 +1,94 @@
+db.Colecctions_Usuario_UPC.aggregate([
+  {
+    $match: {
+      "Nombre": "Javier"
+    }
+  },
+  {
+    $lookup: {
+      from: "Colecctions_Asesoria",
+      localField: "inscripciones_Asesoria",
+      foreignField: "id",
+      as: "Asesorias"
+    }
+  }
+])
+db.Colecctions_Asesoria.aggregate([
+    {
+      $group: {
+        _id: null,
+        promedioCalificacion: { $avg: { $arrayElemAt: ["$Calificacion.Nota", 0] } }
+      }
+    },
+    {
+      $match: {
+        promedioCalificacion: { $gte: 4 }
+      }
+    }
+  ])
+/*-------------------------------------------------------*/
+db.Colecctions_Grado.find({"Curso.Tema": "gramática"});
+/*-------------------------------------------------------*/
+db.Colecctions_Asesoria.count({ "Calificacion.Nota": { $gt: 15 } })
+
+/*-------------------------------------------------------*/
+db.Colecctions_Usuario_UPC.find({
+    "Resenias.Puntuacion": { $gte: 4 }
+  })
+/*-------------------------------------------------------*/
+db.Colecctions_Usuario_UPC.aggregate([
+    {
+      $match: {
+        "Resenias.Puntuacion": { $gte: 4 }
+      }
+    },
+    {
+      $group: {
+        _id: {
+          $cond: {
+            if: { $gte: ["$Resenias.Puntuacion", 4] },
+            then: "4 o más",
+            else: "Menos de 4"
+          }
+        },
+        Count: { $sum: 1 }
+      }
+    }
+  ])
+  /*En este caso, el query realiza una agregación para contar
+   los registros que tienen una puntuación mayor o igual a 4 y
+    los que tienen una puntuación menor a 4. El resultado mostrará 
+    el rango de puntuación y la cantidad de registros correspondiente en cada rango.*/
+
+
+    db.Colecctions_Usuario_UPC.insertOne({
+        "id": 11,
+        "Nombre": "Ana",
+        "Apellido": "García",
+        "inscripciones_Asesoria": [25, 26, 27],
+        "Resenias": [
+          {
+            "Comentario": "Buena asesoría, aprendí mucho",
+            "Puntuacion": 4
+          }
+        ]
+      })
+      
+
+db.Alumnos.find({"Grado": {$nin: ["5"]}}).count()
+db.Colecctions_Asesoria.find({ "Monto": { $gt: 20 } })
+
+db.Colecctions_Grado.aggregate([
+    {
+      $match: {
+        "Curso.Nombre": "Física"
+      }
+    },
+    {
+      $project: {
+        _id: 0,
+        id: "$id",
+        Nombre: "$Nombre"
+      }
+    }
+  ])
