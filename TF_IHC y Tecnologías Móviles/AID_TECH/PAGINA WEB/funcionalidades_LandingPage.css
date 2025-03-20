@@ -1,0 +1,93 @@
+body{
+    position: relative; 
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.header{
+    width: 100%;
+    max-width: 1500px;
+    height: 60px;
+    background-color: #00000055;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 55;
+}
+a,li {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* --------------------------------------- */
+.main_logotype{
+    display: flex;
+    flex: 1; 
+}
+.link_logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+.link_logo .logo{
+    height: 60%;
+    color: #ffff;
+    margin-right: 5px;
+    transition: all 0.5s;
+}
+.link_logo .logo:hover{ transform: scale(1.2);}
+/* ----------------------------------------- */
+.header_nav{ flex: 2;}
+
+.header_nav_ul{ 
+    height: 100%;
+    margin: 0; padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.opcion a{
+    color: #ffffff;
+    margin: 10px; 
+}
+.opcion a:hover{ 
+    color: #FF802C;
+}
+/* -- Opciones de inicio de sesion en el encabezado ----- */
+.opciones_de_inicio_sesion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 5px;
+}
+.opciones_de_inicio_sesion a{ padding: 10px;}
+.link_crear_cuenta{
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    transition: all 0.2 s;
+}
+.link_iniciar_sesion{
+    color: #ffff;
+    padding: 10px;
+    border-radius: 10px; 
+}
+.link_iniciar_sesion:hover{
+    color: #FF802C; 
+}
+.link_crear_cuenta:hover{
+    background-color: #000;
+    color: #ffffff;
+}

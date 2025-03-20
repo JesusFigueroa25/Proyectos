@@ -1,0 +1,56 @@
+/*•	Diseñar la función o procedimiento almacenado que permita determinar la 
+cantidad de modelos de celulares desarrollados por fabricante para un determinado 
+año (considerar la fecha de lanzamiento). El año es ingresado como parámetro.*/
+go
+    CREATE PROCEDURE ObtenerCantidadModelosPorFabricanteYAnio @FabricanteCodigo int,
+    @Anio int,
+    @CantidadModelos int OUTPUT AS BEGIN
+    SELECT @CantidadModelos = COUNT(*)
+    FROM Modelos
+    WHERE
+    YEAR(fecha_lanzamientoi) = @Anio
+    AND Fabricantes_codigo = @FabricanteCodigo;
+END;
+/*Diseñar la función o procedimiento almacenado que permita determinar el(los) cliente(s) 
+que no realizaron ninguna compra en línea durante un determinado año (considerar la fecha de compra).
+ El año es ingresadocomo parámetro.*/
+ CREATE PROCEDURE procedimiento @anio AS BEGIN
+    select * from Compras 
+    where fecha_compra=@anio END
+
+CREATE PROCEDURE ObtenerClientesSinComprasEnLineaPorAnio
+@Anio int 
+AS BEGIN
+SELECT C.codigo, C.nombre FROM Clientes C
+WHERE NOT EXISTS (
+        SELECT *
+        FROM compras CO
+        WHERE CO.Clientes_codigo = C.codigo
+        AND YEAR(CO.fecha_compra) = @Anio
+ AND CO.Lineas_codigo = 1
+    );
+END;
+/*•	Diseñar la función o procedimiento almacenado que retorne el nombre de el(los)
+ cliente(s) que más compras en línea realizó durante un determinado año
+  (considerar la fecha de compra). El año es ingresado como parámetro.*/
+
+  CREATE PROCEDURE procedimiento 
+  @anio int
+  as BEGIN
+  select Nombre,Apellido,count(Compras_id) canti from Compras
+  join Clientes C on codigo_cliente=codigo
+  where fecha_compra=@anio 
+
+  END
+  create procedure dbo.Usuario_mayor_Asesorias
+as
+begin
+SELECT *
+FROM (select Usuario_UPC_id, count(Asesoria_id) Cantidad from Inscripcion_Asesoria I
+group by Usuario_UPC_id) A 
+where Cantidad = (select max(Cantidad)
+from (select Usuario_UPC_id, count(Asesoria_id) Cantidad
+from Inscripcion_Asesoria I
+group by Usuario_UPC_id) A  );
+End
+go

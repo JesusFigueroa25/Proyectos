@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        .continer_sobre_nosotros,.container_vision,.container_mision{
+            position: relative;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            overflow: hidden;
+            min-width: 600px;
+            background-color: #fff;
+            margin: 10px 0;
+        }
+        .container_vision{
+            justify-content:start ;
+        }
+        .sobre_nosotros div img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 50%;
+            z-index: 2;
+        }
+        .informacion_sobre_nosotros,.informacion_mision,.informacion_vision{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 20px;
+            color: #fff;
+            height: 600px;
+            width: 600px;
+            z-index: 5;
+        }
+        .circulo_fondo_1,.circulo_fondo_2,.circulo_fondo_3{
+            right: -10%;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            z-index: 1;
+            height: 900px;
+            width: 900px;
+        }
+        .circulo_fondo_2{
+            left: -10%;
+        }
+        p{
+            font-size: 30px;
+            margin: 20px 50px ;
+        }
+        h2{
+            font-size: 50px;
+            margin: 10px 0;
+            text-decoration: underline  5px solid #F6924F; /*B252B4*/
+        }
+
+
+    </style>
+<main>
+    <div class="continer_sobre_nosotros">
+        <img src="/imagenes/persona_haciendo_señas6.jpg" alt="">
+        <div class="circulo_fondo_1"></div>
+        <div class="informacion_sobre_nosotros">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>
+                >Nuestra plataforma es un servicio en línea que facilita
+                la comunicación entre personas que utilizan 
+                lenguaje de señas y aquellas que prefieren el lenguaje escrito. 
+                Proporcionamos herramientas y recursos para traducir de manera 
+                efectiva entre estos dos medios de comunicación
+            </p>
+        </div>
+    </div>
+    <div class="container_vision">
+        <img src="/imagenes/persona_haciendo_señas6.jpg" alt="">
+        <div class="circulo_fondo_2"></div>
+        <div class="informacion_mision">
+            <h2>VISION</h2>
+            <p>
+                Nuestra visión es una comunicación inclusiva y fluida entre lenguaje
+                de señas y lenguaje escrito, eliminando barreras y empoderando 
+                a las personas sordas y con discapacidades auditivas.
+            </p>
+        </div>
+    </div>
+     
+
+</main>
+
+</body>
+</html>
